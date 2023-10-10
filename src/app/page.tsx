@@ -42,9 +42,9 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const regex = new RegExp("^(https?:\\/\\/)?");
+    const regex = /^https:\/\//;
 
-    if (regex.test(url)) {
+    if (regex.test(url) && url.length > 0) {
       setSubmit(true);
     } else {
       setSubmit(false);

@@ -1,25 +1,15 @@
 import connect from "@/lib/mongodb";
 import Url from "@/model/Url";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import shortHash from "shorthash2";
 
-interface Request {
-  body: {
-    url: string;
-  };
 
-  json: () => Promise<{
-    url: string;
-  }>;
-}
 
-declare const process: {
-  env: {
-    BASE_URL: string;
-  };
-};
 
-export async function POST(request: Request) {
+
+
+
+export async function POST(request: NextRequest) {
   try {
     await connect();
 

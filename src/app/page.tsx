@@ -112,7 +112,7 @@ export default function Home() {
           Our project has been developed using MongoDB and Next.js. For more
           information and to view the source code of the project, please visit
           the following open-source link on{" "}
-          <a href="" className="text-purple-600 hover:underline">
+          <a href="https://github.com/EhsanKey/url-shorter" className="text-purple-600 hover:underline">
             GitHub
           </a>
         </span>

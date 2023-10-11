@@ -98,12 +98,12 @@ export default function Home() {
             className={`w-full p-2 my-2 text-white bg-purple-600 rounded-md outline-none focus:outline-none
             ${
               loading || !submit
-                ? "cursor-not-allowed bg-opacity-80"
+                ? "cursor-not-allowed bg-opacity-60"
                 : "cursor-pointer"
             }`}
             disabled={loading || !submit}
           >
-            Shorten
+            {loading ? "Loading..." : "Shorten"}
           </button>
         </form>
       </section>
@@ -112,7 +112,10 @@ export default function Home() {
           Our project has been developed using MongoDB and Next.js. For more
           information and to view the source code of the project, please visit
           the following open-source link on{" "}
-          <a href="https://github.com/EhsanKey/url-shorter" className="text-purple-600 hover:underline">
+          <a
+            href="https://github.com/EhsanKey/url-shorter"
+            className="text-purple-600 hover:underline"
+          >
             GitHub
           </a>
         </span>

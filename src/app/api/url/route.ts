@@ -3,23 +3,17 @@ import Url from "@/model/Url";
 import { NextRequest, NextResponse } from "next/server";
 import shortHash from "shorthash2";
 
-
-
-
-
-
-
 export async function POST(request: NextRequest) {
   try {
     await connect();
 
     const { url } = await request.json();
-    console.log(url);
+    const regex = /^https:\/\//;
 
-    if (!url) {
+    if (!url || !regex.test(url)) {
       return NextResponse.json(
         {
-          message: "Please add a url",
+          message: "Invalid url",
         },
         { status: 400 }
       );

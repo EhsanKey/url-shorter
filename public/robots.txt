@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://url-shorter-key.vercel.app/sitemap.xml

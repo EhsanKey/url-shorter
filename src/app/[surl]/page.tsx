@@ -1,5 +1,6 @@
 "use client";
 
+import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const sendRequest = async (url: string, method: string) => {
@@ -25,12 +26,7 @@ export default function Page({ params }: { params: { surl: string } }) {
       });
   }, []);
 
-  if (err)
-    return (
-      <div className="flex items-center justify-center h-screen text-2xl text-red-500">
-        {err}
-      </div>
-    );
+  if (err) return notFound();
   return (
     <div className="flex items-center justify-center h-screen text-2xl text-purple-600">
       Loading...

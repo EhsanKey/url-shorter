@@ -2,13 +2,13 @@ import mongoose from "mongoose";
 
 declare const process: {
   env: {
-    MONGODB_URI: string;
+    MONGODB_URL: string;
   };
 };
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
+    await mongoose.connect(process.env.MONGODB_URL);
   } catch (error) {
     throw new Error("Connection failed!");
   }

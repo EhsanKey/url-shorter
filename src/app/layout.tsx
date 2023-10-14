@@ -20,6 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <header>
+        <meta
+          name="google-site-verification"
+          content="4iaZzi85TTmVGW4smnpx-FjbeKYwYxVEctUiyCbFT_E"
+        />
+      </header>
+
       <body className="overflow-hidden h-screen flex justify-between flex-col">
         <Header />
         {children}
